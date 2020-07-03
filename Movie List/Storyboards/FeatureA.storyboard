@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UrX-B7-KWE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="9Ra-Ki-ELN">
+            <objects>
+                <viewController id="UrX-B7-KWE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yI-fW-zMX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new movie to the list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MO1-Uo-dVw">
+                                <rect key="frame" x="20" y="73" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5PT-p6-QPh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-xc-Gz5">
+                                <rect key="frame" x="156" y="238" width="102" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="Ash-Gj-xsF"/>
+                                    <constraint firstAttribute="height" constant="39" id="TEb-AU-CyZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Add movie"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the movie's title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-Zb-xjq">
+                                <rect key="frame" x="20" y="165" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="QYg-KP-uAl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EaP-Zb-xjq" firstAttribute="top" secondItem="MO1-Uo-dVw" secondAttribute="bottom" constant="42" id="15e-Jc-ptU"/>
+                            <constraint firstItem="TDd-xc-Gz5" firstAttribute="centerX" secondItem="4yI-fW-zMX" secondAttribute="centerX" id="4WZ-sd-QZS"/>
+                            <constraint firstItem="MO1-Uo-dVw" firstAttribute="leading" secondItem="LHw-Nh-uDQ" secondAttribute="leading" constant="20" id="RPY-VR-bpP"/>
+                            <constraint firstItem="LHw-Nh-uDQ" firstAttribute="trailing" secondItem="MO1-Uo-dVw" secondAttribute="trailing" constant="20" id="YZH-u8-eBh"/>
+                            <constraint firstItem="LHw-Nh-uDQ" firstAttribute="trailing" secondItem="EaP-Zb-xjq" secondAttribute="trailing" constant="20" id="dEX-38-B7A"/>
+                            <constraint firstItem="TDd-xc-Gz5" firstAttribute="top" secondItem="EaP-Zb-xjq" secondAttribute="bottom" constant="39" id="iVt-1G-6qS"/>
+                            <constraint firstItem="EaP-Zb-xjq" firstAttribute="leading" secondItem="LHw-Nh-uDQ" secondAttribute="leading" constant="20" id="oQZ-ih-g0n"/>
+                            <constraint firstItem="MO1-Uo-dVw" firstAttribute="top" secondItem="LHw-Nh-uDQ" secondAttribute="top" constant="29" id="rwY-XF-dWx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LHw-Nh-uDQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rj9-Hv-H1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="56.919642857142854"/>
+        </scene>
+    </scenes>
+</document>
