@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie List Table View Controller-->
+        <!--Movie List-->
         <scene sceneID="xM1-dA-ZGH">
             <objects>
                 <viewController id="nBV-bI-O3s" customClass="MovieListTableViewController" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +20,47 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4OS-6r-Ukb">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4OS-6r-Ukb" customClass="MovieDetailTableViewCell" customModule="Movie_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4OS-6r-Ukb" id="7N5-9x-VDe" customClass="MovieDetailTableViewCell" customModule="Movie_List" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spiderman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-aw-gME">
+                                                    <rect key="frame" x="20" y="0.0" width="83" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45.5" id="Jjm-xP-duk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFv-rN-i8N">
+                                                    <rect key="frame" x="359" y="0.0" width="35" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45.5" id="h0w-xg-Hhi"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Seen"/>
+                                                    <connections>
+                                                        <action selector="watchedButtonPressed:" destination="4OS-6r-Ukb" eventType="touchUpInside" id="Rno-uW-pz0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Pj-aw-gME" firstAttribute="top" secondItem="7N5-9x-VDe" secondAttribute="top" id="0t0-pC-WFy"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Pj-aw-gME" secondAttribute="bottom" id="ALX-cH-FkT"/>
+                                                <constraint firstAttribute="bottom" secondItem="iFv-rN-i8N" secondAttribute="bottom" id="GyG-9R-GaR"/>
+                                                <constraint firstItem="iFv-rN-i8N" firstAttribute="leading" secondItem="7Pj-aw-gME" secondAttribute="trailing" constant="256" id="U7H-v6-ksv"/>
+                                                <constraint firstItem="iFv-rN-i8N" firstAttribute="top" secondItem="7N5-9x-VDe" secondAttribute="top" id="UwG-wr-tca"/>
+                                                <constraint firstItem="7Pj-aw-gME" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7N5-9x-VDe" secondAttribute="leading" constant="20" symbolic="YES" id="XvG-b3-5tS"/>
+                                                <constraint firstAttribute="trailing" secondItem="iFv-rN-i8N" secondAttribute="trailing" constant="20" id="zBa-sK-QIe"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="TitleLabel" destination="7Pj-aw-gME" id="zzY-MQ-8Vx"/>
+                                            <outlet property="watchedLabel" destination="iFv-rN-i8N" id="DJT-va-uLn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -40,7 +74,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x6y-iT-Tgl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fyN-JT-Aal">
+                    <navigationItem key="navigationItem" title="Movie List" id="fyN-JT-Aal">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Eng-BQ-Ah1">
                             <connections>
                                 <segue destination="XdM-2n-9RC" kind="show" id="Yo4-Bb-Ksm"/>

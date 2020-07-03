@@ -9,6 +9,11 @@
 import UIKit
 
 class MovieDetailTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var watchedLabel: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +25,11 @@ class MovieDetailTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
+    @IBAction func watchedButtonPressed(_ sender: UIButton) {
+        print("Button pressed!")
+    }
+    
 
 }
