@@ -8,34 +8,46 @@
 
 import UIKit
 
-class MovieListViewController: UIViewController {
+class MovieListViewController: UIViewController, UITableViewDelegate {
+    
+    //MARK: - Properties
+    var movies = [Movie]()
 
+    //MARK: - Outlets
     @IBOutlet var tableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        movies.append(Movie(name: "Crazy"))
+
     }
     
-
+    //MARK: - Private Methods
+    private func reloadViews(){
+        tableView.reloadData()
+    }
+    
 }
 
-extension MovieListViewController: UITableViewDelegate{
-    
-    
-}
 
 extension MovieListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDeatailCell", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDeatailCell", for: indexPath) as! MovieDetailTableViewCell
         
+        let data = movies[indexPath.row]
+        
+        cell.TitleLabel.text = data.name
+        
+        cell.watchedLabel.isSelected = data.watched
         
         return cell
     }
