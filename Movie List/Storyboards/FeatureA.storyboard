@@ -33,6 +33,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Add movie"/>
+                                <connections>
+                                    <action selector="saveMovieButton:" destination="UrX-B7-KWE" eventType="touchUpInside" id="TGs-XQ-5Ej"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the movie's title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-Zb-xjq">
                                 <rect key="frame" x="20" y="165" width="374" height="34"/>
@@ -56,6 +59,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LHw-Nh-uDQ"/>
                     </view>
+                    <connections>
+                        <outlet property="movieTitle" destination="EaP-Zb-xjq" id="688-A7-BvQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rj9-Hv-H1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
