@@ -14,21 +14,16 @@ class MovieDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var watchedLabel: UIButton!
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    //MARK: - Properties
+    var watched: Bool = false
     
+
     
     @IBAction func watchedButtonPressed(_ sender: UIButton) {
-        print("Button pressed!")
+        
+        watchedLabel.isSelected.toggle()
+        watched = sender.isSelected
+        
     }
     
 

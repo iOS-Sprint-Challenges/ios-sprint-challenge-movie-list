@@ -10,8 +10,8 @@
 		04FAD2C224AF4781006464FE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD2C124AF4781006464FE /* Movie.swift */; };
 		04FAD2C524AF498A006464FE /* FeatureA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FAD2C424AF498A006464FE /* FeatureA.storyboard */; };
 		04FAD2C824AF4B38006464FE /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD2C724AF4B38006464FE /* AddMovieViewController.swift */; };
-		04FAD2CB24AF4B71006464FE /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD2CA24AF4B71006464FE /* MovieListTableViewController.swift */; };
 		04FAD2CD24AF4BC0006464FE /* MovieDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD2CC24AF4BC0006464FE /* MovieDetailTableViewCell.swift */; };
+		04FAD2CF24AF51A7006464FE /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD2CE24AF51A7006464FE /* MovieListViewController.swift */; };
 		467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467E198C20F5165800E7FF73 /* AppDelegate.swift */; };
 		467E199220F5165800E7FF73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467E199020F5165800E7FF73 /* Main.storyboard */; };
 		467E199420F5165900E7FF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467E199320F5165900E7FF73 /* Assets.xcassets */; };
@@ -23,8 +23,8 @@
 		04FAD2C124AF4781006464FE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		04FAD2C424AF498A006464FE /* FeatureA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureA.storyboard; sourceTree = "<group>"; };
 		04FAD2C724AF4B38006464FE /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
-		04FAD2CA24AF4B71006464FE /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
 		04FAD2CC24AF4BC0006464FE /* MovieDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewCell.swift; sourceTree = "<group>"; };
+		04FAD2CE24AF51A7006464FE /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		467E198920F5165700E7FF73 /* Movie List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		467E198C20F5165800E7FF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		467E199120F5165800E7FF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		04FAD2C924AF4B3D006464FE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04FAD2CA24AF4B71006464FE /* MovieListTableViewController.swift */,
+				04FAD2CE24AF51A7006464FE /* MovieListViewController.swift */,
 				04FAD2C724AF4B38006464FE /* AddMovieViewController.swift */,
 				04FAD2CC24AF4BC0006464FE /* MovieDetailTableViewCell.swift */,
 			);
@@ -135,7 +135,7 @@
 				TargetAttributes = {
 					467E198820F5165700E7FF73 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -178,7 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FAD2CD24AF4BC0006464FE /* MovieDetailTableViewCell.swift in Sources */,
-				04FAD2CB24AF4B71006464FE /* MovieListTableViewController.swift in Sources */,
+				04FAD2CF24AF51A7006464FE /* MovieListViewController.swift in Sources */,
 				04FAD2C224AF4781006464FE /* Movie.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
 				04FAD2C824AF4B38006464FE /* AddMovieViewController.swift in Sources */,
@@ -326,7 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaSchool.MovieList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -344,7 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaSchool.MovieList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
