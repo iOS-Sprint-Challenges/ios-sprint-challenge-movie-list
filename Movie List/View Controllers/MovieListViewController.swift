@@ -11,7 +11,12 @@ import UIKit
 class MovieListViewController: UIViewController, UITableViewDelegate {
     
     //MARK: - Properties
-    private var movies = [Movie]()
+    private var movies: [Movie] = [
+        Movie(name: "Spyderman"),
+        Movie(name: "Late nights"),
+        Movie(name: "Paris")
+    
+    ]
     
     //MARK: - Outlets
     @IBOutlet var tableView: UITableView!
@@ -22,8 +27,6 @@ class MovieListViewController: UIViewController, UITableViewDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        movies.append(Movie(name: "Spyderman"))
     }
     
     //MARK: - Private Methods

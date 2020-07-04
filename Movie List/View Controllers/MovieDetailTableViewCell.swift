@@ -30,6 +30,4 @@ class MovieDetailTableViewCell: UITableViewCell {
         delegate?.statusChanged(title: TitleLabel.text!, status: sender.isSelected)
         
     }
-    
-
 }
