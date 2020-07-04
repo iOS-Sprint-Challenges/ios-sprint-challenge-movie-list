@@ -31,6 +31,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate {
     
 }
 
+//MARK: - UITableViewDataSource
 
 extension MovieListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,8 +58,16 @@ extension MovieListViewController: UITableViewDataSource{
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete{
+            movies.remove(at: indexPath.row)
+        }
+        updateViews()
+    }
 }
 
+//MARK: - AddMovieDelegate
 
 extension MovieListViewController: AddMovieDelegate{
     func addNewMovieToArray(movie: Movie) {
