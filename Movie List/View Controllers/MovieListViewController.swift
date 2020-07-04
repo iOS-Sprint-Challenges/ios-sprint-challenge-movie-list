@@ -12,7 +12,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate {
     
     //MARK: - Properties
     private var movies = [Movie]()
-
+    
     //MARK: - Outlets
     @IBOutlet var tableView: UITableView!
     
@@ -27,6 +27,16 @@ class MovieListViewController: UIViewController, UITableViewDelegate {
     //MARK: - Private Methods
     private func updateViews(){
         tableView.reloadData()
+    }
+    
+    
+    //MARK: - Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NewMovieSegue"{
+            if let addMovieVC = segue.destination as? AddMovieViewController{
+                addMovieVC.delegate = self
+            }
+        }
     }
     
 }
@@ -45,18 +55,12 @@ extension MovieListViewController: UITableViewDataSource{
         
         cell.TitleLabel.text = data.name
         
-        cell.watchedLabel.isSelected = data.watched
+        cell.delegate = self
         
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "NewMovieSegue"{
-            if let addMovieVC = segue.destination as? AddMovieViewController{
-                addMovieVC.delegate = self
-            }
-        }
-    }
+
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -65,6 +69,7 @@ extension MovieListViewController: UITableViewDataSource{
         }
         updateViews()
     }
+    
 }
 
 //MARK: - AddMovieDelegate
@@ -75,5 +80,16 @@ extension MovieListViewController: AddMovieDelegate{
         updateViews()
     }
     
+}
+
+extension MovieListViewController: WatchedStatusDelegate{
+    func statusChanged(title: String, status: Bool) {
+        var item = movies.first { (movie) -> Bool in
+            movie.name == title
+        }
+
+        item?.watched = status
+        updateViews()
+    }
     
 }

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol WatchedStatusDelegate {
+    func statusChanged(title: String, status:Bool)
+}
+
 class MovieDetailTableViewCell: UITableViewCell {
     
     
@@ -15,14 +19,15 @@ class MovieDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var watchedLabel: UIButton!
     
     //MARK: - Properties
-    var watched: Bool = false
+    var delegate: WatchedStatusDelegate?
     
 
+    //MARK: - Actions
     
     @IBAction func watchedButtonPressed(_ sender: UIButton) {
         
         watchedLabel.isSelected.toggle()
-        watched = sender.isSelected
+        delegate?.statusChanged(title: TitleLabel.text!, status: sender.isSelected)
         
     }
     
