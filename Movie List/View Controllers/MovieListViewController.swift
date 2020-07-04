@@ -11,7 +11,7 @@ import UIKit
 class MovieListViewController: UIViewController, UITableViewDelegate {
     
     //MARK: - Properties
-    var movies = [Movie]()
+    private var movies = [Movie]()
 
     //MARK: - Outlets
     @IBOutlet var tableView: UITableView!
@@ -22,13 +22,10 @@ class MovieListViewController: UIViewController, UITableViewDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        movies.append(Movie(name: "Crazy"))
-
     }
     
     //MARK: - Private Methods
-    private func reloadViews(){
+    private func updateViews(){
         tableView.reloadData()
     }
     
@@ -50,6 +47,23 @@ extension MovieListViewController: UITableViewDataSource{
         cell.watchedLabel.isSelected = data.watched
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NewMovieSegue"{
+            if let addMovieVC = segue.destination as? AddMovieViewController{
+                addMovieVC.delegate = self
+            }
+        }
+    }
+    
+}
+
+
+extension MovieListViewController: AddMovieDelegate{
+    func addNewMovieToArray(movie: Movie) {
+        movies.append(movie)
+        updateViews()
     }
     
     

@@ -77,7 +77,7 @@
                     <navigationItem key="navigationItem" title="Movie List" id="fyN-JT-Aal">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Eng-BQ-Ah1">
                             <connections>
-                                <segue destination="XdM-2n-9RC" kind="show" id="Yo4-Bb-Ksm"/>
+                                <segue destination="XdM-2n-9RC" kind="show" identifier="NewMovieSegue" id="Yo4-Bb-Ksm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
