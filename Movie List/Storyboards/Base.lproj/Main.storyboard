@@ -28,17 +28,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="175" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-Lp-BeD">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-my-abW">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="45.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spiderman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-aw-gME">
-                                                            <rect key="frame" x="0.0" y="12.5" width="99.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="45.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFv-rN-i8N">
-                                                            <rect key="frame" x="274.5" y="8" width="99.5" height="30"/>
+                                                            <rect key="frame" x="283" y="0.0" width="91" height="45.5"/>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <state key="normal" title="Not Seen">
                                                                 <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,15 +52,15 @@
                                                         </button>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="Lad-0L-ZVH"/>
+                                                        <constraint firstAttribute="height" constant="45" id="n2X-wC-FVH"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Crc-Lp-BeD" firstAttribute="top" secondItem="7N5-9x-VDe" secondAttribute="top" id="Nm2-a7-xmJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="Crc-Lp-BeD" secondAttribute="bottom" id="bhm-8j-MUl"/>
-                                                <constraint firstItem="Crc-Lp-BeD" firstAttribute="leading" secondItem="7N5-9x-VDe" secondAttribute="leading" constant="20" id="fGx-hO-a5D"/>
-                                                <constraint firstAttribute="trailing" secondItem="Crc-Lp-BeD" secondAttribute="trailing" constant="20" id="mZs-sZ-GCO"/>
+                                                <constraint firstItem="d2e-my-abW" firstAttribute="leading" secondItem="7N5-9x-VDe" secondAttribute="leading" constant="20" id="dEh-eB-fVe"/>
+                                                <constraint firstAttribute="bottom" secondItem="d2e-my-abW" secondAttribute="bottom" id="efY-Ah-soN"/>
+                                                <constraint firstItem="d2e-my-abW" firstAttribute="top" secondItem="7N5-9x-VDe" secondAttribute="top" id="kN8-pk-L1m"/>
+                                                <constraint firstAttribute="trailing" secondItem="d2e-my-abW" secondAttribute="trailing" constant="20" id="mhT-Mz-5ei"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

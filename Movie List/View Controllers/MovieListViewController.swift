@@ -22,6 +22,8 @@ class MovieListViewController: UIViewController, UITableViewDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        movies.append(Movie(name: "Spyderman"))
     }
     
     //MARK: - Private Methods
